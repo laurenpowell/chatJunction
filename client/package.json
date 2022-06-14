@@ -1,0 +1,50 @@
+{
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@stream-io/stream-chat-css": "^2.9.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.1.1",
+    "@testing-library/user-event": "^14.1.1",
+    "axios": "^0.27.2",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^18.1.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^18.1.0",
+    "react-scripts": "^5.0.1",
+    "stream-chat": "^6.5.1",
+    "stream-chat-css": "^1.0.23",
+    "stream-chat-react": "^8.1.2",
+    "universal-cookie": "^4.0.4",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": " react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "source-map-loader": "^3.0.1"
+  }
+}

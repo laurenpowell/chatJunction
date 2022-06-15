@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Cookies from 'universal-cookie';
 import axios from 'axios';
 
-import signinImage from '../assets/signup.jpg';
 
 const cookies = new Cookies();
 
@@ -30,11 +29,11 @@ const Auth = () => {
 
         //const URL = 'http://localhost:5000/auth';
         const URL = 'https://chat-junction.herokuapp.com/auth';
-
+        try{
         const { data: { token, userId, hashedPassword, fullName } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName: form.fullName, phoneNumber, avatarURL,
         });
-
+        
         cookies.set('token', token);
         cookies.set('username', username);
         cookies.set('fullName', fullName);
@@ -47,6 +46,11 @@ const Auth = () => {
         }
 
         window.location.reload();
+        
+        }catch(e){
+            window.alert('Incorrect password or Username')
+        }
+        
     }
 
     const switchMode = () => {
